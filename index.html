@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas Robotics | FLL Maroc 2025-2026 - UNEARTHED</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- LOADING SCREEN -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <div class="logo-inner">
+                    <div class="logo-part part-1"></div>
+                    <div class="logo-part part-2"></div>
+                    <div class="logo-part part-3"></div>
+                    <div class="logo-part part-4"></div>
+                </div>
+            </div>
+            <div class="loader-text">INITIALISATION ATLAS SYSTEMS...</div>
+            <div class="loader-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCANLINE EFFECT -->
+    <div class="scanline"></div>
+
+    <!-- PARTICLES BACKGROUND -->
+    <div class="particles" id="particles"></div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar" id="navbar">
+        <div class="logo-nav">
+            <div class="logo-mini">
+                <div class="logo-mini-inner">
+                    <div class="mini-part"></div>
+                </div>
+            </div>
+            <span class="logo-text">ATLAS ROBOTICS</span>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="#home" class="nav-link active"><i class="fas fa-home"></i> Accueil</a>
+            <a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> À propos</a>
+            <a href="#team" class="nav-link"><i class="fas fa-users"></i> Équipe</a>
+            <a href="#values" class="nav-link"><i class="fas fa-gem"></i> Valeurs</a>
+            <a href="#competition" class="nav-link"><i class="fas fa-trophy"></i> Compétition</a>
+            <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+        </div>
+        <div class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-logo-container">
+                <div class="hero-logo">
+                    <div class="logo-core">
+                        <div class="core-pulse"></div>
+                        <div class="core-glow"></div>
+                    </div>
+                    <div class="logo-ring ring-1"></div>
+                    <div class="logo-ring ring-2"></div>
+                    <div class="logo-ring ring-3"></div>
+                </div>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-part-1">ATLAS</span>
+                <span class="title-part-2">ROBOTICS</span>
+            </h1>
+            <p class="hero-subtitle">
+                Équipe FLL #C-513 | Saison 2025-2026 : <span class="highlight">UNEARTHED</span>
+            </p>
+            <p class="hero-location">
+                <i class="fas fa-map-marker-alt"></i> Lycée Moulay Driss - Fès El Medina, Maroc
+            </p>
+            
+            <div class="hero-badges">
+                <div class="hero-badge">
+                    <i class="fas fa-robot"></i>
+                    <span>Robotique Éducative</span>
+                </div>
+                <div class="hero-badge">
+                    <i class="fas fa-trophy"></i>
+                    <span>FLL UNEARTHED</span>
+                </div>
+                <div class="hero-badge">
+                    <i class="fas fa-users"></i>
+                    <span>10 Membres</span>
+                </div>
+                <div class="hero-badge">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Janvier 2026</span>
+                </div>
+            </div>
+            
+            <div class="hero-cta">
+                <a href="#competition" class="cta-btn primary">
+                    <i class="fas fa-rocket"></i> DÉCOUVRIR NOTRE PROJET
+                </a>
+                <a href="#team" class="cta-btn secondary">
+                    <i class="fas fa-users"></i> RENCONTRER L'ÉQUIPE
+                </a>
+            </div>
+        </div>
+        
+        <div class="hero-scroll-hint">
+            <i class="fas fa-chevron-down"></i>
+            <span>Explorer</span>
+        </div>
+    </section>
+
+    <!-- COMPÉTITION SECTION -->
+    <section class="section competition-section" id="competition">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span class="title-number">01</span>
+                COMPÉTITION FLL 2026
+            </h2>
+            <p class="section-subtitle">Tournoi qualificatif - Saison UNEARTHED</p>
+        </div>
+        
+        <div class="countdown-container">
+            <div class="countdown-card">
+                <div class="countdown-header">
+                    <h3><i class="fas fa-hourglass-half"></i> DÉCOLLAGE IMMINENT</h3>
+                    <p>Compte à rebours vers la compétition régionale</p>
+                </div>
+                
+                <div class="countdown-grid">
+                    <div class="countdown-unit">
+                        <div class="unit-value" id="days">00</div>
+                        <div class="unit-label">JOURS</div>
+                    </div>
+                    <div class="countdown-unit">
+                        <div class="unit-value" id="hours">00</div>
+                        <div class="unit-label">HEURES</div>
+                    </div>
+                    <div class="countdown-unit">
+                        <div class="unit-value" id="minutes">00</div>
+                        <div class="unit-label">MINUTES</div>
+                    </div>
+                    <div class="countdown-unit">
+                        <div class="unit-value" id="seconds">00</div>
+                        <div class="unit-label">SECONDES</div>
+                    </div>
+                </div>
+                
+                <div class="countdown-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Lieu</strong>
+                            <p>Groupe Scolaire la Résidence, Bouskoura</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div>
+                            <strong>Date</strong>
+                            <p>17-18 Janvier 2026</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <strong>Organisateur</strong>
+                            <p>LOOP For Science & Technology</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="competition-details">
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h4>Notre Objectif</h4>
+                    <p>Exceller dans les quatre piliers de FLL : projet d'innovation, conception du robot, valeurs fondamentales et jeu du robot.</p>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h4>Robot LEGO</h4>
+                    <p>Conception et programmation d'un robot performant pour accomplir les missions du défi UNEARTHED.</p>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h4>Innovation</h4>
+                    <p>Développement d'une solution créative pour résoudre un problème rencontré par les archéologues.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UNEARTHED SECTION -->
+    <section class="section unearthed-section" id="about">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span class="title-number">02</span>
+                SAISON UNEARTHED
+            </h2>
+            <p class="section-subtitle">Explorer, Innover, Préserver</p>
+        </div>
+        
+        <div class="unearthed-container">
+            <div class="unearthed-main-card" onclick="toggleUnearthed()">
+                <div class="unearthed-header">
+                    <div class="unearthed-icon">
+                        <i class="fas fa-globe-africa"></i>
+                    </div>
+                    <h3>🌍 DÉFI UNEARTHED 2025-2026</h3>
+                    <p class="click-hint">Cliquez pour explorer le défi <i class="fas fa-chevron-down"></i></p>
+                </div>
+                
+                <div class="unearthed-content" id="unearthedContent">
+                    <div class="challenge-grid">
+                        <div class="challenge-card">
+                            <div class="challenge-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h4>LE DÉFI</h4>
+                            <p>Explorer comment identifier, utiliser et innover avec les découvertes archéologiques de manière durable et responsable.</p>
+                        </div>
+                        <div class="challenge-card">
+                            <div class="challenge-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h4>PROJET D'INNOVATION</h4>
+                            <p>Identifier un problème archéologique et créer une solution innovante pour découvrir, préserver ou valoriser les artifacts.</p>
+                        </div>
+                        <div class="challenge-card">
+                            <div class="challenge-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h4>MISSION ROBOT</h4>
+                            <p>Programmer un robot LEGO pour accomplir des missions sur un tapis de jeu thématique archéologique.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ÉQUIPE SECTION -->
+    <section class="section team-section" id="team">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span class="title-number">03</span>
+                NOTRE ÉQUIPE
+            </h2>
+            <p class="section-subtitle">L'excellence à travers la collaboration</p>
+        </div>
+        
+        <div class="team-stats">
+            <div class="stat-card">
+                <div class="stat-value" data-count="2">0</div>
+                <div class="stat-label">Coachs</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" data-count="8">0</div>
+                <div class="stat-label">Membres</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" data-count="6">0</div>
+                <div class="stat-label">Valeurs FLL</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" data-count="1">0</div>
+                <div class="stat-label">Objectif</div>
+            </div>
+        </div>
+        
+        <!-- COACHS -->
+        <div class="team-category">
+            <h3 class="category-title">
+                <i class="fas fa-graduation-cap"></i> COACHS
+            </h3>
+            <div class="coach-grid">
+                <div class="coach-card" onclick="openModal('driss')">
+                    <div class="coach-header">
+                        <div class="coach-avatar">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="coach-titles">
+                            <h4>Driss Bouricha</h4>
+                            <p class="coach-role">Head Coach</p>
+                        </div>
+                    </div>
+                    <div class="coach-info">
+                        <p><i class="fas fa-briefcase"></i> Professeur d'Informatique</p>
+                        <p><i class="fas fa-school"></i> Tronc Commun</p>
+                    </div>
+                    <div class="coach-action">
+                        <span>Voir profil <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+                
+                <div class="coach-card" onclick="openModal('mohsine')">
+                    <div class="coach-header">
+                        <div class="coach-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="coach-titles">
+                            <h4>Mohsine Aamijane</h4>
+                            <p class="coach-role">Coach Assistant</p>
+                        </div>
+                    </div>
+                    <div class="coach-info">
+                        <p><i class="fas fa-briefcase"></i> Directeur du Lycée</p>
+                        <p><i class="fas fa-history"></i> Expérience FLL</p>
+                    </div>
+                    <div class="coach-action">
+                        <span>Voir profil <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- MEMBRES -->
+        <div class="team-category">
+            <h3 class="category-title">
+                <i class="fas fa-users"></i> MEMBRES DE L'ÉQUIPE
+            </h3>
+            <div class="members-grid">
+                <!-- Membres seront ajoutés dynamiquement -->
+            </div>
+        </div>
+    </section>
+
+    <!-- VALEURS SECTION -->
+    <section class="section values-section" id="values">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span class="title-number">04</span>
+                VALEURS FLL
+            </h2>
+            <p class="section-subtitle">Les piliers de notre succès</p>
+        </div>
+        
+        <div class="values-grid">
+            <!-- Les valeurs seront ajoutées dynamiquement -->
+        </div>
+    </section>
+
+    <!-- RÉALISATIONS SECTION -->
+    <section class="section achievements-section">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span class="title-number">05</span>
+                NOS RÉALISATIONS
+            </h2>
+            <p class="section-subtitle">Notre parcours vers l'excellence</p>
+        </div>
+        
+        <div class="achievements-container">
+            <div class="timeline">
+                <!-- Timeline items will be added dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span class="title-number">06</span>
+                CONTACT & SUPPORT
+            </h2>
+            <p class="section-subtitle">Restez connecté avec Atlas Robotics</p>
+        </div>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4>Email</h4>
+                    <p>Belkadimohammed283@gmail.com</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h4>WhatsApp</h4>
+                    <p>+212 693 099 352</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <h4>Facebook</h4>
+                    <p>Atlas Robotics FLL</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h4>Instagram</h4>
+                    <p>@fllmoulaydriss</p>
+                </div>
+            </div>
+            
+            <div class="contact-form-container">
+                <h3><i class="fas fa-comment-dots"></i> Laissez-nous un message</h3>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nom complet *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adresse email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Votre message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Envoyer le message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="footer-logo-icon">
+                    <div class="logo-simple"></div>
+                </div>
+                <div class="footer-logo-text">
+                    <h3>ATLAS ROBOTICS</h3>
+                    <p>Équipe FLL #C-513</p>
+                </div>
+            </div>
+            
+            <div class="footer-info">
+                <p><i class="fas fa-map-marker-alt"></i> Lycée Moulay Driss - Fès El Medina, Maroc</p>
+                <p><i class="fas fa-trophy"></i> Destination : Bouskoura - 17-18 Janvier 2026</p>
+            </div>
+            
+            <div class="footer-social">
+                <a href="https://www.facebook.com/profile.php?id=61554915237665" target="_blank" class="social-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/fllmoulaydriss" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/212693099352" target="_blank" class="social-link">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="mailto:Belkadimohammed283@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2026 Atlas Robotics FLL Team #C-513. Tous droits réservés.</p>
+            <p class="footer-note">Projet développé avec passion par l'équipe Atlas Robotics</p>
+        </div>
+    </footer>
+
+    <!-- MODALS -->
+    <div id="modalsContainer">
+        <!-- Modals will be injected here -->
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="scripte.js"></script>
+</body>
+</html>
